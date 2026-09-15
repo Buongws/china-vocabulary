@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Bell, BookOpen, CalendarDays, ChartNoAxesCombined, ChevronRight, Flame, Heart, House, LogOut, Menu, PenLine, RefreshCw, Settings, Sparkles, X, CheckCircle2, CircleAlert } from 'lucide-react';
 import { mutate, refreshSnapshot, signOut } from '@/lib/actions';
 import type { Language, Snapshot } from '@/lib/types';
@@ -31,6 +31,7 @@ export function Workspace({ initialData, view, deckId }: { initialData: Snapshot
   const preferred = initialData.profile.preferred_language || initialData.settings.find(item => item.enabled)?.language || 'zh';
   const [language, setLanguage] = useState<Language>(preferred);
   const [busy, setBusy] = useState(false);
+  const pendingRef = useRef(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [toast, setToast] = useState<{ message: string; error?: boolean } | null>(null);
   const today = studyDate();
@@ -41,6 +42,8 @@ export function Workspace({ initialData, view, deckId }: { initialData: Snapshot
 
   function notify(message: string, error = false) { setToast({ message, error }); }
   async function run(method: Parameters<typeof mutate>[0], params: Record<string, unknown> = {}, message?: string) {
+    if (pendingRef.current) return false;
+    pendingRef.current = true;
     setBusy(true);
     try {
       const response = await mutate(method, params);
@@ -49,7 +52,7 @@ export function Workspace({ initialData, view, deckId }: { initialData: Snapshot
       if (message) notify(message);
       return true;
     } catch { notify('Chưa lưu được thay đổi. Kiểm tra kết nối và thử lại nhé.', true); return false; }
-    finally { setBusy(false); }
+    finally { pendingRef.current = false; setBusy(false); }
   }
 
   useEffect(() => {
@@ -70,7 +73,7 @@ export function Workspace({ initialData, view, deckId }: { initialData: Snapshot
 
   return <AppContext.Provider value={{ data, language, setLanguage, busy, run, notify }}>
     <a href="#main-content" className="skip-link">Đến nội dung chính</a>
-    <div className="app-shell">
+    <div className="app-shell" inert={busy} aria-busy={busy}>
       {sidebarOpen && <button className="sidebar-overlay" aria-label="Đóng menu" onClick={() => setSidebarOpen(false)} />}
       <aside className={`sidebar ${sidebarOpen ? 'is-open' : ''}`}>
         <Link href="/" className="brand"><span className="brand-mark">t<span>·</span></span><span>TNA<span className="brand-caption">VOCABULARY</span></span></Link>
@@ -91,6 +94,7 @@ export function Workspace({ initialData, view, deckId }: { initialData: Snapshot
       </main><footer className="app-footer"><span>TNA Vocabulary</span><span>Học theo nhịp của bạn <Heart size={12} /></span></footer></div>
     </div>
     {!data.profile.preferred_language && <OnboardingLanguage />}
+    {busy && <div className="saving-overlay" role="status" aria-live="polite"><div className="saving-card"><RefreshCw className="spin" size={24} aria-hidden="true" /><strong>Đang xử lý…</strong><span>Vui lòng chờ một chút nhé.</span></div></div>}
     {toast && <div className={`toast ${toast.error ? 'toast-error' : ''}`} role={toast.error ? 'alert' : 'status'}>{toast.error ? <CircleAlert size={20} /> : <CheckCircle2 size={20} />}<span>{toast.message}</span><button className="icon-button" onClick={() => setToast(null)} aria-label="Đóng thông báo"><X size={16} /></button></div>}
   </AppContext.Provider>;
 }
