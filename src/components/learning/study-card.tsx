@@ -21,7 +21,8 @@ export interface StudyCardProps {
   kind: "new" | "review" | "maintenance" | "practice";
   onSubmit: (result: StudyResult) => Promise<void>;
   busy?: boolean;
-  onQuickComplete?: () => Promise<void>;
+  onMarkViewed?: () => Promise<void>;
+  viewed?: boolean;
 }
 
 const RATINGS: { value: RecallRating; label: string; detail: string; symbol: string }[] = [
@@ -31,7 +32,7 @@ const RATINGS: { value: RecallRating; label: string; detail: string; symbol: str
   { value: "easy", label: "Dễ", detail: "Rất tự tin", symbol: "✦" },
 ];
 
-export function StudyCard({ word, kind, onSubmit, onQuickComplete, busy = false }: StudyCardProps) {
+export function StudyCard({ word, kind, onSubmit, onMarkViewed, viewed = false, busy = false }: StudyCardProps) {
   const [stage, setStage] = useState<"card" | "exercise">("card");
   const [revealed, setRevealed] = useState(kind === "new");
   const [mode, setMode] = useState<Exclude<ExerciseMode, "hanzi">>("dictation");
@@ -76,6 +77,16 @@ export function StudyCard({ word, kind, onSubmit, onQuickComplete, busy = false 
     }
   }
 
+  async function markViewed() {
+    if (!onMarkViewed || submittingRef.current || locked) return;
+    submittingRef.current = true;
+    setSubmitting(true);
+    setError(null);
+    try { await onMarkViewed(); }
+    catch (cause) { setError(cause instanceof Error ? cause.message : "Chưa lưu được trạng thái đã xem."); }
+    finally { submittingRef.current = false; setSubmitting(false); }
+  }
+
   return (
     <div className={styles.studyCard}>
       <div className={styles.cardMeta}>
@@ -101,7 +112,9 @@ export function StudyCard({ word, kind, onSubmit, onQuickComplete, busy = false 
               <button className={styles.revealButton} type="button" onClick={() => setRevealed(true)}><Eye size={17} aria-hidden="true" /> Lật thẻ xem đáp án</button>
             </>}
           </div>
-          <div className={styles.cardFooter}><p>{kind === "practice" ? "Luyện thêm giúp bạn nhớ chắc hơn." : "Một chút mỗi ngày, cùng nhau đi thật xa."}</p><div className="button-row"><button type="button" className="button outline" onClick={() => void onQuickComplete?.()} disabled={!onQuickComplete || locked || !revealed}><Check size={17} aria-hidden="true" /> Đã học</button><button type="button" className="button primary" onClick={() => setStage("exercise")}>Luyện tập <ArrowRight size={17} aria-hidden="true" /></button></div></div>
+          <div className={styles.cardFooter}><p>{kind === "practice" ? "Luyện thêm giúp bạn nhớ chắc hơn." : "Một chút mỗi ngày, cùng nhau đi thật xa."}</p><div className="button-row">{onMarkViewed && <button type="button" className="button outline" onClick={() => void markViewed()} disabled={viewed || locked || !revealed}>{submitting ? <LoaderCircle size={17} className={styles.spin} /> : <Eye size={17} />}{submitting ? 'Đang lưu…' : viewed ? 'Đã xem từ' : 'Đánh dấu đã xem'}</button>}<button type="button" className="button primary" disabled={locked} onClick={() => setStage("exercise")}>Luyện tập <ArrowRight size={17} aria-hidden="true" /></button></div></div>
+          {onMarkViewed && <p className={styles.scheduleNote}>Đã xem chưa tính là hoàn thành bài. Luyện tập và lưu kết quả để cập nhật tiến độ, lịch ôn.</p>}
+          {error && <p role="alert" className={styles.incorrectNotice}>{error}</p>}
         </>
       ) : (
         <div className={styles.exercise}>
@@ -121,7 +134,7 @@ export function StudyCard({ word, kind, onSubmit, onQuickComplete, busy = false 
             {!firstAttempt || retrying ? <form onSubmit={checkAnswer} className={styles.answerForm}><label htmlFor={`answer-${word.id}`}>{retrying ? "Viết lại từ để nhớ chắc hơn" : "Câu trả lời của bạn"}</label><div className={styles.answerInputRow}><input id={`answer-${word.id}`} className="field" value={answer} onChange={(event) => setAnswer(event.target.value)} placeholder="Nhập từ tiếng Anh…" autoComplete="off" autoCapitalize="none" spellCheck={false} disabled={locked || (effectiveMode === "dictation" && !speech.ready)} autoFocus /><button type="submit" className="button primary" disabled={!answer.trim() || locked || (effectiveMode === "dictation" && !speech.ready)}>Kiểm tra <ArrowRight size={16} aria-hidden="true" /></button></div>{retryFeedback !== null ? <p className={retryFeedback ? styles.correctNotice : styles.incorrectNotice} role="status">{retryFeedback ? "Đúng rồi! Kết quả lần đầu vẫn được giữ để lên lịch ôn phù hợp." : "Thử lại nhé. Bạn có thể đối chiếu đáp án ở trên."}</p> : null}</form> : <button type="button" className={styles.textButton} onClick={() => { setRetrying(true); setAnswer(""); }}><RotateCcw size={14} aria-hidden="true" /> Gõ lại để luyện thêm</button>}
           </>}
 
-          {done ? <section className={styles.ratingSection} aria-label="Tự đánh giá mức độ ghi nhớ"><h3>Bạn cảm thấy mình nhớ từ này thế nào?</h3><div className={styles.ratingGrid}>{RATINGS.map((item) => <button type="button" key={item.value} className={`${styles.ratingButton} ${styles[item.value]} ${rating === item.value ? styles.ratingSelected : ""}`} aria-pressed={rating === item.value} onClick={() => setRating(item.value)} disabled={locked}><span aria-hidden="true">{item.symbol}</span><strong>{item.label}</strong><small>{item.detail}</small></button>)}</div>{!correct ? <p className={styles.scheduleNote}>Lần viết đầu chưa chính xác nên từ này sẽ được ôn lại vào ngày mai.</p> : null}{kind === "practice" ? <p className={styles.scheduleNote}>Luyện thêm đúng không đẩy lịch ôn xa hơn. Một lần sai có thể đưa lịch ôn về ngày mai.</p> : null}<button type="button" className={`button primary ${styles.saveButton}`} onClick={save} disabled={!rating || locked}>{locked ? <LoaderCircle size={18} className={styles.spin} aria-hidden="true" /> : <Check size={18} aria-hidden="true" />}{locked ? "Đang lưu…" : "Lưu & tiếp tục"}</button>{error ? <p role="alert" className={styles.incorrectNotice}>{error}</p> : null}</section> : null}
+          {done ? <section className={styles.ratingSection} aria-label="Tự đánh giá mức độ ghi nhớ"><h3>Bạn cảm thấy mình nhớ từ này thế nào?</h3><div className={styles.ratingGrid}>{RATINGS.map((item) => <button type="button" key={item.value} className={`${styles.ratingButton} ${styles[item.value]} ${rating === item.value ? styles.ratingSelected : ""}`} aria-pressed={rating === item.value} onClick={() => setRating(item.value)} disabled={locked}><span aria-hidden="true">{item.symbol}</span><strong>{item.label}</strong><small>{item.detail}</small></button>)}</div>{!correct ? <p className={styles.scheduleNote}>Lần viết đầu chưa chính xác nên từ này sẽ được ôn lại vào ngày mai.</p> : null}{kind === "practice" ? <p className={styles.scheduleNote}>Luyện thêm đúng không đẩy lịch ôn xa hơn. Một lần sai có thể đưa lịch ôn về ngày mai.</p> : null}<button type="button" className={`button primary ${styles.saveButton}`} onClick={save} disabled={!rating || locked}>{locked ? <LoaderCircle size={18} className={styles.spin} aria-hidden="true" /> : <Check size={18} aria-hidden="true" />}{locked ? "Đang lưu…" : kind === "practice" ? "Lưu lần luyện" : "Hoàn thành bài & tiếp tục"}</button>{error ? <p role="alert" className={styles.incorrectNotice}>{error}</p> : null}</section> : null}
         </div>
       )}
     </div>

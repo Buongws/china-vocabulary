@@ -9,7 +9,7 @@ import { LANGUAGES, type SessionItem, type Word } from '@/lib/types';
 import { studyDate } from '@/lib/utils';
 
 export function StudyPage({ mode }: { mode: 'learn' | 'review' | 'practice' }) {
-  const { data, language, setLanguage, run, busy } = useApp();
+  const { data, language, run, busy } = useApp();
   const [practiceWord, setPracticeWord] = useState<Word | null>(null);
   const [query, setQuery] = useState('');
   const startedRef = useRef(false);
@@ -25,23 +25,18 @@ export function StudyPage({ mode }: { mode: 'learn' | 'review' | 'practice' }) {
   const activeSettings = data.settings.filter(item => item.enabled);
 
   useEffect(() => {
-    const requested = new URLSearchParams(window.location.search).get('language');
-    if (requested === 'zh' || requested === 'en') setLanguage(requested);
-  }, [setLanguage]);
-
-  useEffect(() => {
-    if (mode === 'practice' || todaySessions.length || startedRef.current || !activeSettings.length) return;
+    if (!data.profile.preferred_language || mode === 'practice' || todaySessions.length || startedRef.current || !activeSettings.length) return;
     startedRef.current = true;
     void run('start_daily_sessions');
-  }, [activeSettings.length, mode, run, todaySessions.length]);
+  }, [data.profile.preferred_language, activeSettings.length, mode, run, todaySessions.length]);
 
   async function submit(item: SessionItem, result: StudyResult) {
     const ok = await run('submit_answer', { p_item_id:item.id, p_attempt_id:crypto.randomUUID(), p_rating:result.rating, p_answer:result.answer, p_mode:result.mode, p_writing_correct:result.writingCorrect }, 'Đã lưu. Mình tiếp tục nhé!');
     if (!ok) throw new Error('Chưa lưu được kết quả.');
   }
-  async function quickComplete(item: SessionItem) {
-    const ok = await run('submit_answer', { p_item_id:item.id, p_attempt_id:crypto.randomUUID(), p_rating:'good', p_answer:word?.term || '', p_mode:language === 'zh' ? 'hanzi' : 'meaning', p_writing_correct:true }, 'Đã ghi nhận từ này là đã học.');
-    if (!ok) throw new Error('Chưa lưu được tiến độ.');
+  async function markViewed(item: SessionItem) {
+    const ok = await run('mark_item_viewed', { p_item_id:item.id });
+    if (!ok) throw new Error('Chưa lưu được trạng thái đã xem. Hãy thử lại nhé.');
   }
   async function practice(result: StudyResult) {
     if (!practiceWord) return;
@@ -62,8 +57,9 @@ export function StudyPage({ mode }: { mode: 'learn' | 'review' | 'practice' }) {
     return <section className="empty-state panel"><BookOpen /><h2>Lộ trình {LANGUAGES[language].label} đang tạm dừng</h2><p>Bật lại lộ trình trong cài đặt, thay đổi sẽ áp dụng cho ngày học kế tiếp.</p><Link className="button primary" href="/settings">Mở cài đặt</Link></section>;
   }
   if (!session && busy) return <StudyLayout title="Đang chuẩn bị bài học…" detail="Mình đang chọn từ đến hạn và những từ mới phù hợp." completed={0} total={0}><div className="study-loading"><span className="brand-mark pulse">t<span>·</span></span></div></StudyLayout>;
-  if (!word || !current) return <StudyLayout title={mode === 'learn' ? 'Từ mới hôm nay' : 'Ôn tập hôm nay'} detail={mode === 'learn' ? 'Bạn đã hoàn thành phần từ mới của lộ trình này.' : 'Bạn đã ôn hết những từ đến hạn.'} completed={allModeItems.length} total={allModeItems.length}><section className="study-complete"><span className="completion-mark"><Check size={34} /></span><h2>Xong một chặng rồi!</h2><p>{session?.completed_at ? 'Mục tiêu của lộ trình hôm nay đã hoàn thành.' : mode === 'review' ? 'Giờ mình có thể chuyển sang học từ mới.' : 'Bạn có thể luyện thêm hoặc quay lại vào ngày mai.'}</p><div className="button-row"><Link href={mode === 'review' ? '/learn' : '/'} className="button primary">{mode === 'review' ? 'Học từ mới' : 'Về trang hôm nay'} <ArrowRight size={17} /></Link><Link href="/practice" className="button outline">Luyện thêm</Link></div></section></StudyLayout>;
-  return <StudyLayout title={mode === 'learn' ? 'Từ mới hôm nay' : 'Ôn tập hôm nay'} detail={`${LANGUAGES[language].label} · ${completedCount + 1} trên ${allModeItems.length}`} completed={completedCount} total={allModeItems.length}><StudyCard key={current.id} word={word} kind={current.kind} busy={busy} onSubmit={result => submit(current,result)} onQuickComplete={() => quickComplete(current)} /></StudyLayout>;
+  if (!session) return <StudyLayout title="Chuẩn bị ngày học" detail="Bắt đầu để chọn bài hôm nay. Nếu kết nối bị gián đoạn, bạn có thể thử lại." completed={0} total={0}><button className="button primary" disabled={busy} onClick={() => void run('start_daily_sessions')}>Chuẩn bị bài học</button></StudyLayout>;
+  if (!word || !current) return <StudyLayout title={mode === 'learn' ? 'Từ mới hôm nay' : 'Ôn tập hôm nay'} detail={mode === 'learn' ? 'Bạn đã hoàn thành phần từ mới của lộ trình này.' : 'Bạn đã ôn hết những từ đến hạn.'} completed={allModeItems.length} total={allModeItems.length}><section className="study-complete"><span className="completion-mark"><Check size={34} /></span><h2>Xong một chặng rồi!</h2><p>{session?.completed_at ? 'Mục tiêu của lộ trình hôm nay đã hoàn thành.' : mode === 'review' ? 'Giờ mình có thể chuyển sang học từ mới.' : 'Bạn có thể luyện thêm hoặc quay lại vào ngày mai.'}</p><div className="button-row"><Link href={mode === 'review' ? `/learn?language=${language}` : '/'} className="button primary">{mode === 'review' ? 'Học từ mới' : 'Về trang hôm nay'} <ArrowRight size={17} /></Link><Link href={`/practice?language=${language}`} className="button outline">Luyện thêm</Link></div></section></StudyLayout>;
+  return <StudyLayout title={mode === 'learn' ? 'Từ mới hôm nay' : 'Ôn tập hôm nay'} detail={`${LANGUAGES[language].label} · ${completedCount + 1} trên ${allModeItems.length}`} completed={completedCount} total={allModeItems.length}><StudyCard key={current.id} word={word} kind={current.kind} busy={busy} onSubmit={result => submit(current,result)} viewed={Boolean(current.viewed_at)} onMarkViewed={() => markViewed(current)} /></StudyLayout>;
 }
 
 function StudyLayout({ title, detail, completed, total, children }: { title:string; detail:string; completed:number; total:number; children:React.ReactNode }) {

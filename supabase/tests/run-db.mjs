@@ -16,6 +16,9 @@ try {
     GRANT USAGE ON SCHEMA auth, public TO anon, authenticated;
   `);
   await db.exec(await readFile(`${root}supabase/migrations/202609140001_initial.sql`, 'utf8'));
+  await db.exec(await readFile(`${root}supabase/migrations/202609150001_preferred_language.sql`, 'utf8'));
+  await db.exec(await readFile(`${root}supabase/migrations/202609150002_learning_experience.sql`, 'utf8'));
+  await db.exec(await readFile(`${root}supabase/migrations/202609150002_learning_experience.sql`, 'utf8'));
   console.log('PASS: complete migration compiles on PostgreSQL');
   await db.exec(await readFile(`${root}supabase/tests/behavior.sql`, 'utf8'));
   console.log('PASS: RPC, SRS, snapshots, idempotency, RLS, couples, reminders, and import tests');
@@ -23,6 +26,8 @@ try {
     await db.exec(await readFile(`${root}supabase/seed.sql`, 'utf8'));
     const { rows } = await db.query(`SELECT language, count(*)::int AS count FROM public.words GROUP BY language ORDER BY language`);
     if (rows.length !== 2 || rows.some((row) => row.count !== 300)) throw new Error(`Expected 300 words per language: ${JSON.stringify(rows)}`);
+    await db.exec(await readFile(`${root}supabase/tests/learning-experience.sql`, 'utf8'));
+    console.log('PASS: viewed-only results, onboarding, frozen daily plan, priority settings, cross-user authorization');
     console.log('PASS: seed SQL imports 300 English + 300 Chinese words');
   } catch (error) {
     if (error.code === 'ENOENT') console.log('SKIP: seed.sql has not been generated yet');

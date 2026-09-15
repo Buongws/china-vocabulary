@@ -4,7 +4,7 @@ import type { Language, Snapshot } from '@/lib/types';
 import type { mutate } from '@/lib/actions';
 
 export type AppContextValue = {
-  data: Snapshot; language: Language; setLanguage: (language: Language) => void; busy: boolean;
+  data: Snapshot; language: Language; setLanguage: (language: Language) => void; busy: boolean; pendingMethod: Parameters<typeof mutate>[0] | null;
   run: (method: Parameters<typeof mutate>[0], params?: Record<string, unknown>, message?: string) => Promise<boolean>;
   notify: (message: string, error?: boolean) => void;
 };

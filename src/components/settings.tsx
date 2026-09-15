@@ -24,13 +24,13 @@ export function SettingsPage() {
       deck_ids: form.getAll(`${language}_decks`).map(String),
       auto_pace: form.has(`${language}_auto`),
     }));
-    await run('save_settings', { p_display_name:form.get('display_name'), p_reminder_time:form.get('reminder_time'), p_reminders_enabled:form.has('reminders_enabled'), p_languages:languages }, 'Đã lưu cài đặt. Thay đổi lộ trình sau khi bắt đầu học sẽ áp dụng từ ngày mai.');
+    await run('save_learning_settings', { p_preferred_language:form.get('preferred_language'), p_display_name:form.get('display_name'), p_reminder_time:form.get('reminder_time'), p_reminders_enabled:form.has('reminders_enabled'), p_languages:languages }, 'Đã lưu cài đặt. Thay đổi lộ trình sau khi bắt đầu học sẽ áp dụng từ ngày mai.');
   }
 
   return <><section className="page-heading"><div><p className="eyebrow">THEO NHỊP CỦA RIÊNG BẠN</p><h1>Cài đặt</h1><p className="muted">Chọn điều phù hợp cho hành trình mỗi ngày.</p></div></section>
-    <form className="settings-grid" onSubmit={save}>
-      <div className="settings-main">
-        <section className="panel settings-section"><div className="settings-title"><span className="icon-tile rose"><UserRound size={20} /></span><div><h2>Hồ sơ của bạn</h2><p>Tên này sẽ hiện với người cùng học.</p></div></div><label className="field">Tên hiển thị<input name="display_name" required minLength={1} maxLength={80} defaultValue={data.profile.display_name} /></label></section>
+    <div className="settings-grid">
+      <form className="settings-main" onSubmit={save}>
+        <section className="panel settings-section"><div className="settings-title"><span className="icon-tile rose"><UserRound size={20} /></span><div><h2>Hồ sơ của bạn</h2><p>Tên này sẽ hiện với người cùng học.</p></div></div><label className="field">Tên hiển thị<input name="display_name" required minLength={1} maxLength={80} defaultValue={data.profile.display_name} /></label><label className="field preferred-field">Ngôn ngữ ưu tiên<select name="preferred_language" defaultValue={data.profile.preferred_language || 'zh'}><option value="zh">Tiếng Trung</option><option value="en">Tiếng Anh</option></select></label><p className="form-note">Hiển thị trước trên trang chủ. Bài đang học hôm nay được giữ nguyên; thay đổi lộ trình áp dụng từ ngày mai nếu đã bắt đầu học.</p></section>
         <section className="panel settings-section"><div className="settings-title"><span className="icon-tile mint"><Check size={20} /></span><div><h2>Lộ trình học</h2><p>Hoàn thành tất cả lộ trình đang bật để giữ streak ngày.</p></div></div>
           {data.settings.map(settings => {
             const available = data.decks.filter(deck => deck.language === settings.language && !deck.archived);
@@ -40,9 +40,9 @@ export function SettingsPage() {
         </section>
         <section className="panel settings-section"><div className="settings-title"><span className="icon-tile gold"><Bell size={20} /></span><div><h2>Nhắc học</h2><p>Thông báo xuất hiện trong ứng dụng khi đến giờ.</p></div></div><label className="checkbox-card"><input type="checkbox" name="reminders_enabled" defaultChecked={data.profile.reminders_enabled} /><span><strong>Bật nhắc học mỗi ngày</strong><small>Chỉ nhắc một lần nếu bạn chưa hoàn thành</small></span></label><label className="field time-field"><Clock size={17} /> Giờ nhắc<input name="reminder_time" type="time" defaultValue={data.profile.reminder_time.slice(0,5)} required /></label></section>
         <button className="button primary settings-save" disabled={busy}><Save size={18} />{busy ? 'Đang lưu…' : 'Lưu cài đặt'}</button>
-      </div>
+      </form>
       <aside className="settings-side"><section className="panel settings-section"><div className="settings-title"><span className="icon-tile paper"><KeyRound size={20} /></span><div><h2>Mật khẩu</h2><p>Đổi mật khẩu của tài khoản đang đăng nhập.</p></div></div>{changingPassword ? <PasswordForm onDone={() => setChangingPassword(false)} onMessage={setPasswordMessage} /> : <button type="button" className="button outline full-width" onClick={() => setChangingPassword(true)}>Đổi mật khẩu</button>}{passwordMessage && <p className={passwordMessage.error ? 'error-message' : 'success-message'}>{passwordMessage.text}</p>}</section><section className="quiet-note"><span>LƯU Ý NHỎ</span><blockquote>Thay đổi mục tiêu trong ngày không làm xáo trộn bài đang học. Mục tiêu mới bắt đầu từ ngày mai.</blockquote></section></aside>
-    </form></>;
+    </div></>;
 }
 
 function PasswordForm({ onDone, onMessage }: { onDone:()=>void; onMessage:(value:{text:string;error?:boolean})=>void }) {

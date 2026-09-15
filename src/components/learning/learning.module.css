@@ -115,3 +115,7 @@
   .writingModes > button { font-size: 10px; padding: 9px 7px; }
   .writingModes > button > svg { display: none; }
 }
+
+.example,.example>div,.cardFooter>div,.answerCorrect>div,.answerIncorrect>div{min-width:0;overflow-wrap:anywhere}
+.writerFrame{max-width:100%;aspect-ratio:1;height:auto}.writerTarget{max-width:100%}.writerTarget svg{max-width:100%;height:auto}
+@media(max-width:560px){.cardFooter{flex-direction:column;align-items:stretch}.cardFooter p{max-width:none}.flashcard{padding:28px 14px}.ratingGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.ratingButton small{font-size:11px}.answerInputRow input{font-size:16px}}

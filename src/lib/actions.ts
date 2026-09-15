@@ -5,7 +5,7 @@ import { z } from 'zod';
 import { createClient } from '@/lib/supabase/server';
 import type { Snapshot } from '@/lib/types';
 
-const methods = z.enum(['start_daily_sessions','submit_answer','practice_word','save_settings','set_preferred_language','create_invite','join_couple','leave_couple','encourage_partner','save_deck','archive_deck','save_word','archive_word','import_words','mark_notifications_read']);
+const methods = z.enum(['start_daily_sessions','submit_answer','practice_word','save_settings','save_learning_settings','mark_item_viewed','set_preferred_language','create_invite','join_couple','leave_couple','encourage_partner','save_deck','archive_deck','save_word','archive_word','import_words','mark_notifications_read']);
 type Method = z.infer<typeof methods>;
 
 function readableError(message: string) {
