@@ -1,0 +1,321 @@
+// Five pipe-separated fields: term, pronunciation, Vietnamese meaning, example, Vietnamese translation.
+// Original beginner learning material, using mainly British pronunciation and spelling.
+#greetings|Chào hỏi & giao tiếp|Làm quen, chào hỏi và đặt những câu hỏi đầu tiên bằng tiếng Anh.
+hello|/həˈləʊ/|xin chào|Hello, my name is Anna.|Xin chào, tôi tên là Anna.
+hi|/haɪ/|chào (thân mật)|Hi, Ben! How are you?|Chào Ben! Bạn khỏe không?
+goodbye|/ˌɡʊdˈbaɪ/|tạm biệt|Goodbye! Have a safe trip.|Tạm biệt! Chúc bạn có chuyến đi an toàn.
+please|/pliːz/|làm ơn; xin vui lòng|Please close the door.|Vui lòng đóng cửa lại.
+thank you|/ˈθæŋk juː/|cảm ơn|Thank you for your help.|Cảm ơn sự giúp đỡ của bạn.
+sorry|/ˈsɒr.i/|xin lỗi; lấy làm tiếc|Sorry, I am late.|Xin lỗi, tôi đến muộn.
+welcome|/ˈwel.kəm/|chào mừng; được chào đón|Welcome to our home.|Chào mừng bạn đến nhà chúng tôi.
+yes|/jes/|vâng; có; đúng|Yes, I would like some tea.|Vâng, tôi muốn uống một chút trà.
+no|/nəʊ/|không|No, I do not need a bag.|Không, tôi không cần túi.
+okay|/ˌəʊˈkeɪ/|được; ổn|Is it okay to sit here?|Tôi ngồi ở đây có được không?
+name|/neɪm/|tên|What is your name?|Bạn tên là gì?
+first name|/ˈfɜːst neɪm/|tên riêng|My first name is Anna.|Tên riêng của tôi là Anna.
+last name|/ˈlɑːst neɪm/|họ|Please write your last name here.|Vui lòng viết họ của bạn vào đây.
+meet|/miːt/|gặp; làm quen|It is nice to meet you.|Rất vui được làm quen với bạn.
+nice|/naɪs/|tốt; dễ chịu; đẹp|You have a nice smile.|Bạn có nụ cười đẹp.
+fine|/faɪn/|khỏe; ổn|I am fine, thank you.|Tôi khỏe, cảm ơn bạn.
+how|/haʊ/|như thế nào; bằng cách nào|How do you spell your name?|Bạn đánh vần tên mình như thế nào?
+what|/wɒt/|cái gì; gì|What would you like to drink?|Bạn muốn uống gì?
+who|/huː/|ai|Who is your English teacher?|Ai là giáo viên tiếng Anh của bạn?
+where|/weər/|ở đâu|Where do you live?|Bạn sống ở đâu?
+why|/waɪ/|tại sao|Why are you learning Chinese?|Tại sao bạn đang học tiếng Trung?
+when|/wen/|khi nào|When does the lesson start?|Khi nào bài học bắt đầu?
+which|/wɪtʃ/|cái nào; nào|Which colour do you prefer?|Bạn thích màu nào hơn?
+again|/əˈɡen/|lại; lần nữa|Please say that again.|Vui lòng nói lại điều đó.
+maybe|/ˈmeɪ.bi/|có lẽ|Maybe we can meet tomorrow.|Có lẽ chúng ta có thể gặp nhau ngày mai.
+sure|/ʃɔːr/|chắc chắn; được thôi|Sure, you can use my pen.|Được thôi, bạn có thể dùng bút của tôi.
+understand|/ˌʌn.dəˈstænd/|hiểu|I understand this sentence now.|Bây giờ tôi đã hiểu câu này.
+repeat|/rɪˈpiːt/|nhắc lại; lặp lại|Could you repeat the question?|Bạn có thể nhắc lại câu hỏi không?
+excuse me|/ɪkˈskjuːz miː/|xin lỗi (để thu hút chú ý)|Excuse me, where is the station?|Xin lỗi, nhà ga ở đâu?
+see you|/ˈsiː juː/|hẹn gặp lại|See you tomorrow!|Hẹn gặp bạn ngày mai!
+
+#family|Gia đình & con người|Giới thiệu người thân, bạn bè và những người quanh bạn.
+I|/aɪ/|tôi|I live with my family.|Tôi sống cùng gia đình.
+you|/juː/|bạn; các bạn|You are a good friend.|Bạn là một người bạn tốt.
+he|/hiː/|anh ấy; ông ấy|He works at a hospital.|Anh ấy làm việc tại một bệnh viện.
+she|/ʃiː/|cô ấy; bà ấy|She likes reading books.|Cô ấy thích đọc sách.
+we|/wiː/|chúng tôi; chúng ta|We study English together.|Chúng tôi học tiếng Anh cùng nhau.
+they|/ðeɪ/|họ; chúng|They are my neighbours.|Họ là hàng xóm của tôi.
+family|/ˈfæm.əl.i/|gia đình|My family eats dinner together.|Gia đình tôi ăn tối cùng nhau.
+father|/ˈfɑː.ðər/|bố; cha|My father cooks on Sundays.|Bố tôi nấu ăn vào các ngày Chủ nhật.
+mother|/ˈmʌð.ər/|mẹ|My mother loves flowers.|Mẹ tôi yêu hoa.
+parents|/ˈpeə.rənts/|bố mẹ|My parents live in Hanoi.|Bố mẹ tôi sống ở Hà Nội.
+brother|/ˈbrʌð.ər/|anh trai; em trai|My brother is three years older than me.|Anh trai tôi lớn hơn tôi ba tuổi.
+sister|/ˈsɪs.tər/|chị gái; em gái|My sister plays the piano.|Chị gái tôi chơi đàn piano.
+grandfather|/ˈɡræn.fɑː.ðər/|ông (nội hoặc ngoại)|My grandfather walks in the park every morning.|Ông tôi đi bộ trong công viên mỗi sáng.
+grandmother|/ˈɡræn.mʌð.ər/|bà (nội hoặc ngoại)|My grandmother makes delicious soup.|Bà tôi nấu canh rất ngon.
+son|/sʌn/|con trai|Their son is six years old.|Con trai của họ sáu tuổi.
+daughter|/ˈdɔː.tər/|con gái|Her daughter goes to this school.|Con gái của cô ấy học ở trường này.
+child|/tʃaɪld/|đứa trẻ; người con|The child is drawing a house.|Đứa trẻ đang vẽ một ngôi nhà.
+children|/ˈtʃɪl.drən/|những đứa trẻ; các con|The children are playing outside.|Bọn trẻ đang chơi bên ngoài.
+husband|/ˈhʌz.bənd/|chồng|Her husband is a teacher.|Chồng của cô ấy là giáo viên.
+wife|/waɪf/|vợ|His wife speaks three languages.|Vợ của anh ấy nói được ba ngôn ngữ.
+boyfriend|/ˈbɔɪ.frend/|bạn trai|My boyfriend likes cooking.|Bạn trai tôi thích nấu ăn.
+girlfriend|/ˈɡɜːl.frend/|bạn gái|His girlfriend works in a library.|Bạn gái của anh ấy làm việc ở thư viện.
+friend|/frend/|người bạn|My best friend lives near me.|Bạn thân nhất của tôi sống gần tôi.
+classmate|/ˈklɑːs.meɪt/|bạn cùng lớp|My classmate helps me with Chinese.|Bạn cùng lớp giúp tôi học tiếng Trung.
+neighbour|/ˈneɪ.bər/|hàng xóm|Our neighbour has a friendly dog.|Hàng xóm của chúng tôi có một chú chó thân thiện.
+man|/mæn/|người đàn ông|The man at the door is my uncle.|Người đàn ông ở cửa là chú của tôi.
+woman|/ˈwʊm.ən/|người phụ nữ|The woman in blue is our teacher.|Người phụ nữ mặc đồ xanh là cô giáo của chúng tôi.
+baby|/ˈbeɪ.bi/|em bé|The baby is sleeping.|Em bé đang ngủ.
+people|/ˈpiː.pəl/|mọi người; những người|There are five people in my family.|Gia đình tôi có năm người.
+person|/ˈpɜː.sən/|người; một người|She is a very kind person.|Cô ấy là một người rất tốt bụng.
+
+#time|Số đếm & thời gian|Học số cơ bản, nói ngày giờ và lên lịch hằng ngày.
+zero|/ˈzɪə.rəʊ/|số không|The temperature is zero degrees.|Nhiệt độ là không độ.
+one|/wʌn/|một|I have one question.|Tôi có một câu hỏi.
+two|/tuː/|hai|We need two tickets.|Chúng tôi cần hai vé.
+three|/θriː/|ba|There are three apples on the table.|Có ba quả táo trên bàn.
+four|/fɔːr/|bốn|The meeting starts at four.|Cuộc họp bắt đầu lúc bốn giờ.
+five|/faɪv/|năm (số đếm)|I learn five new words every day.|Tôi học năm từ mới mỗi ngày.
+six|/sɪks/|sáu|I get up at six in the morning.|Tôi thức dậy lúc sáu giờ sáng.
+seven|/ˈsev.ən/|bảy|There are seven days in a week.|Một tuần có bảy ngày.
+eight|/eɪt/|tám|The shop opens at eight.|Cửa hàng mở cửa lúc tám giờ.
+nine|/naɪn/|chín|My little brother is nine years old.|Em trai tôi chín tuổi.
+ten|/ten/|mười|Please wait for ten minutes.|Vui lòng đợi mười phút.
+hundred|/ˈhʌn.drəd/|trăm|This book has a hundred pages.|Quyển sách này có một trăm trang.
+thousand|/ˈθaʊ.zənd/|nghìn|A thousand people visited the museum today.|Một nghìn người đã đến thăm bảo tàng hôm nay.
+today|/təˈdeɪ/|hôm nay|Today is my first day at work.|Hôm nay là ngày đầu tiên tôi đi làm.
+tomorrow|/təˈmɒr.əʊ/|ngày mai|We have an English lesson tomorrow.|Ngày mai chúng tôi có một buổi học tiếng Anh.
+yesterday|/ˈjes.tə.deɪ/|hôm qua|I called my mother yesterday.|Hôm qua tôi đã gọi cho mẹ.
+now|/naʊ/|bây giờ|We can start now.|Bây giờ chúng ta có thể bắt đầu.
+morning|/ˈmɔː.nɪŋ/|buổi sáng|I drink tea every morning.|Tôi uống trà mỗi sáng.
+afternoon|/ˌɑːf.təˈnuːn/|buổi chiều|See you this afternoon.|Hẹn gặp bạn chiều nay.
+evening|/ˈiːv.nɪŋ/|buổi tối|We watch a film in the evening.|Chúng tôi xem phim vào buổi tối.
+night|/naɪt/|đêm; ban đêm|The streets are quiet at night.|Đường phố yên tĩnh vào ban đêm.
+week|/wiːk/|tuần|I go swimming twice a week.|Tôi đi bơi hai lần một tuần.
+weekend|/ˌwiːkˈend/|cuối tuần|What are you doing this weekend?|Cuối tuần này bạn sẽ làm gì?
+month|/mʌnθ/|tháng|My birthday is next month.|Sinh nhật tôi vào tháng tới.
+year|/jɪər/|năm (thời gian)|There are twelve months in a year.|Một năm có mười hai tháng.
+hour|/aʊər/|giờ; tiếng đồng hồ|The train journey takes an hour.|Chuyến đi bằng tàu mất một giờ.
+minute|/ˈmɪn.ɪt/|phút|I will be ready in a minute.|Tôi sẽ sẵn sàng trong một phút nữa.
+time|/taɪm/|thời gian; giờ|What time is it?|Bây giờ là mấy giờ?
+birthday|/ˈbɜːθ.deɪ/|sinh nhật|Happy birthday to you!|Chúc mừng sinh nhật bạn!
+day|/deɪ/|ngày; ban ngày|Have a lovely day!|Chúc bạn một ngày tốt lành!
+
+#food|Ăn uống|Gọi tên món ăn, đồ uống và nói về các bữa ăn trong ngày.
+water|/ˈwɔː.tər/|nước|Please drink some water.|Bạn hãy uống một chút nước.
+tea|/tiː/|trà|Would you like a cup of tea?|Bạn có muốn một tách trà không?
+coffee|/ˈkɒf.i/|cà phê|I drink coffee without sugar.|Tôi uống cà phê không đường.
+milk|/mɪlk/|sữa|There is some milk in the fridge.|Có một ít sữa trong tủ lạnh.
+juice|/dʒuːs/|nước ép|She ordered a glass of orange juice.|Cô ấy gọi một ly nước cam ép.
+rice|/raɪs/|cơm; gạo|We eat rice with vegetables.|Chúng tôi ăn cơm với rau.
+noodles|/ˈnuː.dəlz/|mì sợi|These noodles are very hot.|Món mì này rất nóng.
+bread|/bred/|bánh mì|I buy fresh bread every morning.|Tôi mua bánh mì mới mỗi sáng.
+egg|/eɡ/|trứng|I eat an egg for breakfast.|Tôi ăn một quả trứng vào bữa sáng.
+chicken|/ˈtʃɪk.ɪn/|thịt gà; con gà|We are having chicken for dinner.|Chúng tôi ăn thịt gà vào bữa tối.
+beef|/biːf/|thịt bò|This soup has beef and noodles.|Món súp này có thịt bò và mì.
+pork|/pɔːk/|thịt lợn; thịt heo|My mother bought some pork at the market.|Mẹ tôi mua một ít thịt lợn ở chợ.
+fish|/fɪʃ/|cá|We had grilled fish for lunch.|Chúng tôi ăn cá nướng vào bữa trưa.
+vegetables|/ˈvedʒ.tə.bəlz/|rau củ|You should eat vegetables every day.|Bạn nên ăn rau củ mỗi ngày.
+fruit|/fruːt/|trái cây|I often eat fruit after lunch.|Tôi thường ăn trái cây sau bữa trưa.
+apple|/ˈæp.əl/|quả táo|I eat an apple every morning.|Tôi ăn một quả táo mỗi sáng.
+banana|/bəˈnɑː.nə/|quả chuối|I put a banana in my bag.|Tôi bỏ một quả chuối vào túi.
+orange|/ˈɒr.ɪndʒ/|quả cam; màu cam|This orange is sweet and juicy.|Quả cam này ngọt và mọng nước.
+tomato|/təˈmɑː.təʊ/|quả cà chua|Please cut the tomato into small pieces.|Vui lòng cắt cà chua thành miếng nhỏ.
+potato|/pəˈteɪ.təʊ/|khoai tây|I would like a baked potato.|Tôi muốn một củ khoai tây nướng.
+soup|/suːp/|canh; súp|This soup needs a little salt.|Món canh này cần thêm một chút muối.
+salad|/ˈsæl.əd/|rau trộn; xa lát|She made a fresh salad for lunch.|Cô ấy làm món rau trộn tươi cho bữa trưa.
+breakfast|/ˈbrek.fəst/|bữa sáng|What do you usually eat for breakfast?|Bạn thường ăn gì vào bữa sáng?
+lunch|/lʌntʃ/|bữa trưa|We have lunch at twelve.|Chúng tôi ăn trưa lúc mười hai giờ.
+dinner|/ˈdɪn.ər/|bữa tối; bữa chính|Dinner is ready.|Bữa tối đã sẵn sàng.
+eat|/iːt/|ăn|Let us eat together.|Chúng ta cùng ăn nhé.
+drink|/drɪŋk/|uống; đồ uống|What would you like to drink?|Bạn muốn uống gì?
+delicious|/dɪˈlɪʃ.əs/|ngon|This cake is delicious.|Chiếc bánh này rất ngon.
+sweet|/swiːt/|ngọt|These grapes are very sweet.|Những quả nho này rất ngọt.
+spicy|/ˈspaɪ.si/|cay|I like spicy food.|Tôi thích đồ ăn cay.
+
+#home|Nhà cửa & sinh hoạt|Mô tả ngôi nhà, đồ dùng và thói quen sinh hoạt của bạn.
+home|/həʊm/|nhà; tổ ấm|I get home at six.|Tôi về đến nhà lúc sáu giờ.
+house|/haʊs/|ngôi nhà|Our house has a small garden.|Nhà chúng tôi có một khu vườn nhỏ.
+room|/ruːm/|căn phòng|My room is bright and quiet.|Phòng của tôi sáng sủa và yên tĩnh.
+living room|/ˈlɪv.ɪŋ ruːm/|phòng khách|We watch television in the living room.|Chúng tôi xem ti vi trong phòng khách.
+bedroom|/ˈbed.ruːm/|phòng ngủ|There is a desk in my bedroom.|Có một chiếc bàn học trong phòng ngủ của tôi.
+kitchen|/ˈkɪtʃ.ɪn/|nhà bếp|My father is cooking in the kitchen.|Bố tôi đang nấu ăn trong bếp.
+bathroom|/ˈbɑːθ.ruːm/|phòng tắm; nhà vệ sinh|The bathroom is next to the bedroom.|Phòng tắm ở cạnh phòng ngủ.
+door|/dɔːr/|cửa ra vào|Please open the door.|Vui lòng mở cửa.
+window|/ˈwɪn.dəʊ/|cửa sổ|I sit near the window.|Tôi ngồi gần cửa sổ.
+table|/ˈteɪ.bəl/|cái bàn|The keys are on the table.|Chìa khóa ở trên bàn.
+chair|/tʃeər/|cái ghế|This chair is comfortable.|Chiếc ghế này rất thoải mái.
+bed|/bed/|giường|The cat is sleeping on my bed.|Con mèo đang ngủ trên giường của tôi.
+sofa|/ˈsəʊ.fə/|ghế sô pha|We sat on the sofa and talked.|Chúng tôi ngồi trên ghế sô pha và trò chuyện.
+lamp|/læmp/|đèn|I need a lamp for my desk.|Tôi cần một chiếc đèn cho bàn học.
+television|/ˈtel.ɪ.vɪʒ.ən/|ti vi|My grandmother watches television after dinner.|Bà tôi xem ti vi sau bữa tối.
+fridge|/frɪdʒ/|tủ lạnh|Put the milk in the fridge.|Hãy cất sữa vào tủ lạnh.
+air conditioner|/ˈeə kənˌdɪʃ.ən.ər/|máy điều hòa|Please turn on the air conditioner.|Vui lòng bật máy điều hòa.
+washing machine|/ˈwɒʃ.ɪŋ məˌʃiːn/|máy giặt|The washing machine is in the kitchen.|Máy giặt ở trong bếp.
+key|/kiː/|chìa khóa|I cannot find my key.|Tôi không tìm thấy chìa khóa của mình.
+cup|/kʌp/|cốc; tách|This cup is for your tea.|Chiếc tách này dùng để đựng trà của bạn.
+bowl|/bəʊl/|bát; chén|I would like a bowl of soup.|Tôi muốn một bát canh.
+plate|/pleɪt/|đĩa|Put the bread on a plate.|Hãy đặt bánh mì lên đĩa.
+spoon|/spuːn/|thìa; muỗng|Use a spoon to eat the soup.|Dùng thìa để ăn súp.
+fork|/fɔːk/|nĩa; dĩa|There is a fork beside the plate.|Có một chiếc nĩa bên cạnh đĩa.
+towel|/taʊəl/|khăn mặt; khăn tắm|Here is a clean towel.|Đây là một chiếc khăn sạch.
+shower|/ˈʃaʊər/|vòi sen; tắm vòi sen|I take a shower every evening.|Tôi tắm vòi sen mỗi tối.
+brush|/brʌʃ/|chải; bàn chải|I brush my teeth twice a day.|Tôi đánh răng hai lần mỗi ngày.
+sleep|/sliːp/|ngủ|I usually sleep for eight hours.|Tôi thường ngủ tám tiếng.
+wake up|/ˌweɪk ˈʌp/|thức dậy|I wake up at six every morning.|Tôi thức dậy lúc sáu giờ mỗi sáng.
+clean|/kliːn/|sạch; lau dọn|We clean the house on Sundays.|Chúng tôi dọn nhà vào các ngày Chủ nhật.
+
+#study|Học tập & ngôn ngữ|Học từ mới, hỏi bài và sử dụng những vật dụng trong lớp.
+school|/skuːl/|trường học|My school is near the park.|Trường tôi ở gần công viên.
+classroom|/ˈklɑːs.ruːm/|phòng học|There are twenty chairs in our classroom.|Có hai mươi chiếc ghế trong phòng học của chúng tôi.
+teacher|/ˈtiː.tʃər/|giáo viên|Our teacher explains new words clearly.|Giáo viên của chúng tôi giải thích từ mới rõ ràng.
+student|/ˈstjuː.dənt/|học sinh; sinh viên|I am a university student.|Tôi là sinh viên đại học.
+book|/bʊk/|sách|This book has many useful examples.|Quyển sách này có nhiều ví dụ hữu ích.
+notebook|/ˈnəʊt.bʊk/|quyển vở; sổ tay|I write new words in my notebook.|Tôi viết từ mới vào vở.
+pen|/pen/|bút mực; bút bi|Can I borrow your pen?|Tôi có thể mượn bút của bạn không?
+pencil|/ˈpen.səl/|bút chì|She draws with a pencil.|Cô ấy vẽ bằng bút chì.
+paper|/ˈpeɪ.pər/|giấy|Please give me a sheet of paper.|Vui lòng cho tôi một tờ giấy.
+schoolbag|/ˈskuːl.bæɡ/|cặp sách|My schoolbag is under the desk.|Cặp sách của tôi ở dưới bàn.
+dictionary|/ˈdɪk.ʃən.ər.i/|từ điển|I look up new words in a dictionary.|Tôi tra từ mới trong từ điển.
+Chinese|/ˌtʃaɪˈniːz/|tiếng Trung; thuộc Trung Quốc|I am learning Chinese with my friend.|Tôi đang học tiếng Trung cùng bạn.
+English|/ˈɪŋ.ɡlɪʃ/|tiếng Anh; thuộc nước Anh|We practise English every evening.|Chúng tôi luyện tiếng Anh mỗi tối.
+word|/wɜːd/|từ; từ ngữ|How do you pronounce this word?|Bạn phát âm từ này như thế nào?
+sentence|/ˈsen.təns/|câu|Please read the whole sentence.|Vui lòng đọc cả câu.
+meaning|/ˈmiː.nɪŋ/|ý nghĩa; nghĩa|What is the meaning of this word?|Nghĩa của từ này là gì?
+learn|/lɜːn/|học; học được|I want to learn a new language.|Tôi muốn học một ngôn ngữ mới.
+read|/riːd/|đọc (dạng hiện tại)|I read a short story every night.|Tôi đọc một truyện ngắn mỗi tối.
+write|/raɪt/|viết|Please write your answer here.|Vui lòng viết câu trả lời của bạn vào đây.
+listen|/ˈlɪs.ən/|nghe; lắng nghe|Listen to the recording twice.|Hãy nghe bản ghi âm hai lần.
+speak|/spiːk/|nói|Can you speak more slowly?|Bạn có thể nói chậm hơn không?
+practise|/ˈpræk.tɪs/|luyện tập (động từ)|I practise writing Chinese characters every day.|Tôi luyện viết chữ Hán mỗi ngày.
+review|/rɪˈvjuː/|ôn tập; xem lại|Let us review yesterday's words.|Chúng ta ôn lại những từ hôm qua nhé.
+homework|/ˈhəʊm.wɜːk/|bài tập về nhà|I do my homework after dinner.|Tôi làm bài tập về nhà sau bữa tối.
+exam|/ɪɡˈzæm/|kỳ thi; bài thi|We have an English exam tomorrow.|Ngày mai chúng tôi có bài thi tiếng Anh.
+question|/ˈkwes.tʃən/|câu hỏi|Can I ask you a question?|Tôi có thể hỏi bạn một câu không?
+answer|/ˈɑːn.sər/|câu trả lời; trả lời|Please check your answer.|Vui lòng kiểm tra câu trả lời của bạn.
+library|/ˈlaɪ.brər.i/|thư viện|I borrow books from the library.|Tôi mượn sách ở thư viện.
+lesson|/ˈles.ən/|bài học; buổi học|Today's lesson is about food.|Bài học hôm nay nói về thức ăn.
+language|/ˈlæŋ.ɡwɪdʒ/|ngôn ngữ|Which language would you like to learn?|Bạn muốn học ngôn ngữ nào?
+
+#work|Công việc & công nghệ|Nói về nghề nghiệp, công việc hằng ngày và thiết bị số.
+job|/dʒɒb/|công việc; nghề|I started a new job last month.|Tôi bắt đầu công việc mới vào tháng trước.
+work|/wɜːk/|làm việc; công việc|I work from home on Fridays.|Tôi làm việc ở nhà vào các ngày thứ Sáu.
+company|/ˈkʌm.pə.ni/|công ty|Our company has a small office.|Công ty chúng tôi có một văn phòng nhỏ.
+office|/ˈɒf.ɪs/|văn phòng|The office is on the second floor.|Văn phòng ở tầng hai.
+colleague|/ˈkɒl.iːɡ/|đồng nghiệp|My colleague helped me with the report.|Đồng nghiệp đã giúp tôi làm bản báo cáo.
+boss|/bɒs/|sếp; người chủ|My boss is in a meeting.|Sếp của tôi đang họp.
+manager|/ˈmæn.ɪ.dʒər/|người quản lý|The manager welcomed the new team.|Người quản lý chào đón nhóm mới.
+doctor|/ˈdɒk.tər/|bác sĩ|You should see a doctor.|Bạn nên đi khám bác sĩ.
+nurse|/nɜːs/|y tá; điều dưỡng|The nurse checked my temperature.|Y tá đã kiểm tra nhiệt độ của tôi.
+driver|/ˈdraɪ.vər/|tài xế|The driver stopped near the station.|Tài xế dừng xe gần nhà ga.
+engineer|/ˌen.dʒɪˈnɪər/|kỹ sư|My brother is an engineer.|Anh trai tôi là kỹ sư.
+meeting|/ˈmiː.tɪŋ/|cuộc họp|Our meeting starts at nine.|Cuộc họp của chúng tôi bắt đầu lúc chín giờ.
+plan|/plæn/|kế hoạch; lên kế hoạch|Let us make a plan for next week.|Chúng ta hãy lập kế hoạch cho tuần tới.
+task|/tɑːsk/|nhiệm vụ; công việc cần làm|This task takes about an hour.|Nhiệm vụ này mất khoảng một giờ.
+finish|/ˈfɪn.ɪʃ/|hoàn thành; kết thúc|I want to finish the report today.|Tôi muốn hoàn thành bản báo cáo hôm nay.
+start|/stɑːt/|bắt đầu|What time do you start work?|Bạn bắt đầu làm việc lúc mấy giờ?
+end|/end/|kết thúc; phần cuối|The meeting will end at three.|Cuộc họp sẽ kết thúc lúc ba giờ.
+busy|/ˈbɪz.i/|bận rộn|I am busy this morning.|Sáng nay tôi bận.
+break|/breɪk/|giờ nghỉ; nghỉ giải lao|Let us take a short break.|Chúng ta nghỉ giải lao một chút nhé.
+help|/help/|giúp đỡ; sự giúp đỡ|Can you help me open this file?|Bạn có thể giúp tôi mở tệp này không?
+computer|/kəmˈpjuː.tər/|máy tính|My computer is on the desk.|Máy tính của tôi ở trên bàn.
+phone|/fəʊn/|điện thoại|My phone needs charging.|Điện thoại của tôi cần được sạc.
+call|/kɔːl/|gọi điện; cuộc gọi|I will call you after work.|Tôi sẽ gọi cho bạn sau giờ làm.
+email|/ˈiː.meɪl/|thư điện tử; email|Please send me an email.|Vui lòng gửi cho tôi một email.
+password|/ˈpɑːs.wɜːd/|mật khẩu|Do not share your password.|Đừng chia sẻ mật khẩu của bạn.
+internet|/ˈɪn.tə.net/|mạng internet|The internet is slow today.|Mạng internet hôm nay chậm.
+file|/faɪl/|tệp; hồ sơ|Please save the file before closing it.|Hãy lưu tệp trước khi đóng.
+message|/ˈmes.ɪdʒ/|tin nhắn; lời nhắn|I sent you a message this morning.|Tôi đã gửi tin nhắn cho bạn sáng nay.
+website|/ˈweb.saɪt/|trang web|You can find the address on our website.|Bạn có thể tìm địa chỉ trên trang web của chúng tôi.
+keyboard|/ˈkiː.bɔːd/|bàn phím|This keyboard is easy to use.|Bàn phím này dễ sử dụng.
+
+#travel|Đi lại & du lịch|Hỏi đường, đặt chỗ và giao tiếp trong những chuyến đi.
+go|/ɡəʊ/|đi|We go to the park on Sundays.|Chúng tôi đi công viên vào các ngày Chủ nhật.
+come|/kʌm/|đến|Please come to my birthday party.|Mời bạn đến dự tiệc sinh nhật của tôi.
+walk|/wɔːk/|đi bộ; cuộc đi bộ|I walk to school every day.|Tôi đi bộ đến trường mỗi ngày.
+arrive|/əˈraɪv/|đến nơi|What time does the train arrive?|Tàu đến lúc mấy giờ?
+return|/rɪˈtɜːn/|trở về; trả lại|We return home on Monday.|Chúng tôi trở về nhà vào thứ Hai.
+road|/rəʊd/|đường|This road leads to the beach.|Con đường này dẫn đến bãi biển.
+left|/left/|bên trái; hướng trái|Turn left at the next street.|Rẽ trái ở con phố tiếp theo.
+right|/raɪt/|bên phải; hướng phải; đúng|The bank is on your right.|Ngân hàng ở bên phải bạn.
+front|/frʌnt/|phía trước|The bus stop is in front of the school.|Trạm xe buýt ở phía trước trường học.
+behind|/bɪˈhaɪnd/|phía sau|The car park is behind the hotel.|Bãi đỗ xe ở phía sau khách sạn.
+near|/nɪər/|gần|Is there a supermarket near here?|Gần đây có siêu thị không?
+far|/fɑːr/|xa|The airport is far from the city.|Sân bay cách xa thành phố.
+map|/mæp/|bản đồ|Let us check the map first.|Chúng ta xem bản đồ trước nhé.
+bus|/bʌs/|xe buýt|I take the bus to work.|Tôi đi làm bằng xe buýt.
+subway|/ˈsʌb.weɪ/|tàu điện ngầm (cách dùng Mỹ)|We take the subway to the museum.|Chúng tôi đi tàu điện ngầm đến bảo tàng.
+taxi|/ˈtæk.si/|xe taxi|Can you call a taxi for me?|Bạn có thể gọi taxi giúp tôi không?
+train|/treɪn/|tàu hỏa|The train leaves at eight.|Tàu hỏa khởi hành lúc tám giờ.
+plane|/pleɪn/|máy bay|Our plane lands in the afternoon.|Máy bay của chúng tôi hạ cánh vào buổi chiều.
+bicycle|/ˈbaɪ.sɪ.kəl/|xe đạp|He rides his bicycle to school.|Anh ấy đạp xe đến trường.
+station|/ˈsteɪ.ʃən/|nhà ga; trạm|I will meet you at the station.|Tôi sẽ gặp bạn ở nhà ga.
+airport|/ˈeə.pɔːt/|sân bay|We need to get to the airport early.|Chúng ta cần đến sân bay sớm.
+ticket|/ˈtɪk.ɪt/|vé|I would like a ticket to London.|Tôi muốn một vé đi Luân Đôn.
+passport|/ˈpɑːs.pɔːt/|hộ chiếu|Please show your passport.|Vui lòng xuất trình hộ chiếu của bạn.
+hotel|/həʊˈtel/|khách sạn|We are staying at a small hotel.|Chúng tôi đang ở một khách sạn nhỏ.
+travel|/ˈtræv.əl/|du lịch; di chuyển|I like to travel with my family.|Tôi thích đi du lịch cùng gia đình.
+luggage|/ˈlʌɡ.ɪdʒ/|hành lý|Please keep your luggage with you.|Vui lòng giữ hành lý bên mình.
+city|/ˈsɪt.i/|thành phố|Hanoi is a beautiful city.|Hà Nội là một thành phố xinh đẹp.
+park|/pɑːk/|công viên|We had a picnic in the park.|Chúng tôi đã đi dã ngoại trong công viên.
+beach|/biːtʃ/|bãi biển|The children are playing on the beach.|Bọn trẻ đang chơi trên bãi biển.
+trip|/trɪp/|chuyến đi|How was your trip to Vietnam?|Chuyến đi Việt Nam của bạn thế nào?
+
+#shopping|Mua sắm & màu sắc|Hỏi giá, chọn kích cỡ, màu sắc và thanh toán khi mua hàng.
+shop|/ʃɒp/|cửa hàng; mua sắm|This shop sells fresh bread.|Cửa hàng này bán bánh mì mới.
+supermarket|/ˈsuː.pəˌmɑː.kɪt/|siêu thị|I go to the supermarket after work.|Tôi đi siêu thị sau giờ làm.
+market|/ˈmɑː.kɪt/|chợ; thị trường|The market is busy in the morning.|Chợ nhộn nhịp vào buổi sáng.
+buy|/baɪ/|mua|I want to buy a new shirt.|Tôi muốn mua một chiếc áo sơ mi mới.
+sell|/sel/|bán|Do you sell notebooks here?|Ở đây có bán vở không?
+money|/ˈmʌn.i/|tiền|I save a little money every month.|Tôi tiết kiệm một ít tiền mỗi tháng.
+price|/praɪs/|giá; giá cả|What is the price of this bag?|Chiếc túi này giá bao nhiêu?
+cost|/kɒst/|có giá; chi phí|How much does this shirt cost?|Chiếc áo sơ mi này giá bao nhiêu?
+expensive|/ɪkˈspen.sɪv/|đắt|These shoes are too expensive.|Đôi giày này đắt quá.
+cheap|/tʃiːp/|rẻ|The fruit at this market is cheap.|Trái cây ở chợ này rẻ.
+clothes|/kləʊðz/|quần áo|I need some warm clothes.|Tôi cần một ít quần áo ấm.
+shirt|/ʃɜːt/|áo sơ mi|He is wearing a white shirt.|Anh ấy đang mặc áo sơ mi trắng.
+trousers|/ˈtraʊ.zəz/|quần dài|These trousers are a little long.|Chiếc quần dài này hơi dài.
+dress|/dres/|váy liền thân|She bought a blue dress.|Cô ấy đã mua một chiếc váy liền màu xanh dương.
+shoes|/ʃuːz/|giày|These shoes are comfortable for walking.|Đi đôi giày này rất thoải mái khi đi bộ.
+socks|/sɒks/|tất; vớ|I need two pairs of socks.|Tôi cần hai đôi tất.
+hat|/hæt/|mũ; nón|Wear a hat when it is sunny.|Hãy đội mũ khi trời nắng.
+bag|/bæɡ/|túi; túi xách|My bag is under the chair.|Túi của tôi ở dưới ghế.
+colour|/ˈkʌl.ər/|màu sắc|What is your favourite colour?|Màu yêu thích của bạn là gì?
+red|/red/|màu đỏ|I like the red jacket.|Tôi thích chiếc áo khoác màu đỏ.
+blue|/bluː/|màu xanh dương|Her schoolbag is blue.|Cặp sách của cô ấy màu xanh dương.
+green|/ɡriːn/|màu xanh lá|The green cup is mine.|Chiếc cốc màu xanh lá là của tôi.
+yellow|/ˈjel.əʊ/|màu vàng|He bought a yellow umbrella.|Anh ấy đã mua một chiếc ô màu vàng.
+white|/waɪt/|màu trắng|I would like a white T-shirt.|Tôi muốn một chiếc áo phông màu trắng.
+black|/blæk/|màu đen|These black trousers look nice.|Chiếc quần đen này trông đẹp.
+big|/bɪɡ/|to; lớn|This bag is too big for me.|Chiếc túi này quá to đối với tôi.
+small|/smɔːl/|nhỏ; bé|Do you have this in a small size?|Bạn có món này cỡ nhỏ không?
+try|/traɪ/|thử|Can I try these shoes on?|Tôi có thể thử đôi giày này không?
+pay|/peɪ/|trả tiền; thanh toán|Can I pay by card?|Tôi có thể thanh toán bằng thẻ không?
+receipt|/rɪˈsiːt/|biên nhận; hóa đơn thanh toán|Could I have a receipt, please?|Vui lòng cho tôi một biên nhận được không?
+
+#wellbeing|Sức khỏe & sở thích|Nói về cảm xúc, sức khỏe và các hoạt động thư giãn.
+body|/ˈbɒd.i/|cơ thể|Your body needs rest.|Cơ thể của bạn cần được nghỉ ngơi.
+head|/hed/|đầu|My head hurts a little.|Đầu tôi hơi đau.
+eye|/aɪ/|mắt|There is something in my eye.|Có thứ gì đó trong mắt tôi.
+ear|/ɪər/|tai|My left ear hurts.|Tai trái của tôi bị đau.
+hand|/hænd/|tay; bàn tay|Please raise your hand to ask a question.|Hãy giơ tay để đặt câu hỏi.
+foot|/fʊt/|chân; bàn chân|My right foot is sore.|Bàn chân phải của tôi bị đau.
+hurt|/hɜːt/|đau; làm đau|Does your knee hurt?|Đầu gối của bạn có đau không?
+sick|/sɪk/|ốm; bị bệnh; buồn nôn|I feel sick today.|Hôm nay tôi thấy không khỏe.
+cold|/kəʊld/|cảm lạnh; lạnh|I have a cold.|Tôi bị cảm lạnh.
+hospital|/ˈhɒs.pɪ.təl/|bệnh viện|The hospital is near the station.|Bệnh viện ở gần nhà ga.
+medicine|/ˈmed.ɪ.sən/|thuốc; y học|Take this medicine after food.|Hãy uống thuốc này sau khi ăn.
+tired|/taɪəd/|mệt mỏi|I am tired after a long day.|Tôi mệt sau một ngày dài.
+hungry|/ˈhʌŋ.ɡri/|đói|Are you hungry yet?|Bạn đã đói chưa?
+thirsty|/ˈθɜː.sti/|khát|I am thirsty after running.|Tôi khát sau khi chạy.
+happy|/ˈhæp.i/|vui; hạnh phúc|I am happy to see you.|Tôi rất vui khi gặp bạn.
+sad|/sæd/|buồn|She felt sad when her friend moved away.|Cô ấy thấy buồn khi bạn mình chuyển đi.
+like|/laɪk/|thích; giống như|I like listening to music.|Tôi thích nghe nhạc.
+love|/lʌv/|yêu; tình yêu|I love my family.|Tôi yêu gia đình mình.
+exercise|/ˈek.sə.saɪz/|tập thể dục; bài tập|I exercise for thirty minutes every day.|Tôi tập thể dục ba mươi phút mỗi ngày.
+run|/rʌn/|chạy|I run in the park every morning.|Tôi chạy trong công viên mỗi sáng.
+swim|/swɪm/|bơi|Can you swim?|Bạn biết bơi không?
+music|/ˈmjuː.zɪk/|âm nhạc|This music helps me relax.|Bản nhạc này giúp tôi thư giãn.
+movie|/ˈmuː.vi/|phim điện ảnh|Let us watch a movie tonight.|Tối nay chúng ta xem phim nhé.
+sing|/sɪŋ/|hát|My sister likes to sing.|Em gái tôi thích hát.
+dance|/dɑːns/|nhảy; múa; điệu nhảy|We dance together every Saturday.|Chúng tôi nhảy cùng nhau mỗi thứ Bảy.
+draw|/drɔː/|vẽ|Can you draw a cat?|Bạn có thể vẽ một con mèo không?
+photo|/ˈfəʊ.təʊ/|bức ảnh|Let us take a photo together.|Chúng ta chụp một bức ảnh cùng nhau nhé.
+game|/ɡeɪm/|trò chơi|This game is for two players.|Trò chơi này dành cho hai người chơi.
+weather|/ˈweð.ər/|thời tiết|The weather is lovely today.|Thời tiết hôm nay thật đẹp.
+relax|/rɪˈlæks/|thư giãn|I read a book to relax after work.|Tôi đọc sách để thư giãn sau giờ làm.

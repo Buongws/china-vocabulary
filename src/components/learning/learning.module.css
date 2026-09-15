@@ -1,0 +1,117 @@
+.studyCard { width: 100%; color: #453e4b; }
+.cardMeta { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 19px; }
+.languagePill { color: #876988; background: #f0e7f0; border-radius: 7px; padding: 7px 11px; font-size: 10px; letter-spacing: .09em; font-weight: 700; }
+.kindLabel { font-size: 12px; color: #a39ba4; }
+.flashcard { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 400px; padding: 44px 32px 34px; border: 1px solid #eee4e7; border-radius: 22px; text-align: center; overflow: hidden; }
+.chineseCard { background: linear-gradient(140deg, #fffafa 0%, #fcf7f7 58%, #f7ecf0 100%); }
+.englishCard { background: linear-gradient(140deg, #fffefd 0%, #fbfaf5 58%, #f1f3e9 100%); }
+.cardAccent { position: absolute; right: 25px; top: 12px; font-size: 63px; font-weight: 200; color: #e5cdd7; transform: rotate(10deg); }
+.eyebrow { color: #a79aa7; font-size: 9px; font-weight: 650; letter-spacing: .16em; line-height: 1.7; }
+.chineseTerm { font-size: clamp(48px, 9vw, 82px); font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; font-weight: 500; line-height: 1.35; letter-spacing: .075em; color: #71596e; margin: 28px 0 8px; overflow-wrap: anywhere; }
+.englishTerm { color: #626b50; font-size: clamp(35px, 8vw, 60px); font-weight: 500; line-height: 1.2; margin: 31px 0 12px; overflow-wrap: anywhere; }
+.pronunciation { color: #9c8699; font-size: 15px; margin: 0 0 14px; letter-spacing: .035em; text-align: center; }
+.audioButton { display: inline-flex; align-items: center; gap: 7px; border: 1px solid #e8dbe3; background: #fffc; border-radius: 99px; padding: 9px 15px; color: #947487; font-size: 12px; cursor: pointer; }
+.audioButton:disabled { cursor: default; opacity: .5; }
+.audioButton:hover:not(:disabled) { background: #fff; }
+.speakerWrap { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.voiceNote { max-width: 270px; color: #9c8191; font-size: 11px; }
+.meaningDivider { width: 35px; height: 1px; background: #e1d3da; margin: 23px 0 17px; }
+.meaning { font-size: 21px; font-weight: 500; margin: 0 0 24px; color: #645864; }
+.example { display: flex; align-items: flex-start; justify-content: center; gap: 10px; max-width: 440px; color: #aaa0a7; }
+.example > svg { flex-shrink: 0; margin-top: 4px; }
+.example p { font-size: 14px; color: #8d7d89; line-height: 1.7; margin: 0 0 5px; }
+.example small { font-size: 12px; line-height: 1.6; }
+.memoryIcon { display: grid; place-items: center; width: 70px; height: 70px; border: 1px solid #eadbe6; border-radius: 50%; color: #b48cac; background: #fff9; margin: 30px 0 20px; }
+.recallMeaning { font-size: 29px; margin: 0 0 15px; color: #71596e; font-weight: 500; }
+.recallHint { font-size: 13px; color: #a28f9a; line-height: 1.7; margin: 0 0 25px; }
+.revealButton { border: 1px dashed #d8becf; color: #92768b; background: #fff9; padding: 11px 18px; border-radius: 10px; display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 12px; }
+.cardFooter { display: flex; justify-content: space-between; align-items: center; gap: 14px; padding-top: 23px; }
+.cardFooter p { font-size: 12px; color: #a59aa3; max-width: 240px; line-height: 1.6; }
+.exercise { padding: 27px; border: 1px solid #ece5ec; border-radius: 19px; background: #fffdfc; }
+.exerciseHeading { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 27px; }
+.exerciseHeading h2 { font-size: 21px; font-weight: 550; margin: 7px 0 0; }
+.exerciseIcon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; background: #f0eaf5; color: #a18db2; flex-shrink: 0; }
+.exerciseIcon > span { font-size: 26px; }
+.exerciseMeaning { font-size: 22px; text-align: center; margin: 6px 0 8px; color: #746374; }
+.exerciseTabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; padding: 5px; background: #f5f2f4; border-radius: 10px; }
+.exerciseTabs button { display: flex; justify-content: center; align-items: center; gap: 7px; padding: 10px 5px; border: 0; border-radius: 7px; background: transparent; color: #9b919d; font-size: 11px; white-space: nowrap; cursor: pointer; }
+.exerciseTabs button.selectedTab { background: #fff; color: #8e7198; box-shadow: 0 2px 6px #6f517411; }
+.exerciseTabs button:disabled { opacity: .55; cursor: default; }
+.dictationPrompt, .questionPrompt { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 32px 15px; }
+.listenCircle { display: grid; place-items: center; width: 78px; height: 78px; background: #eee7f4; border: 7px solid #f7f3fa; border-radius: 50%; color: #9d84ac; cursor: pointer; }
+.listenCircle:disabled { opacity: .6; }
+.dictationPrompt p { font-size: 15px; margin: 17px 0 7px; }
+.dictationPrompt small, .questionPrompt small { font-size: 12px; color: #a098a3; line-height: 1.6; }
+.questionPrompt p { font-size: 22px; line-height: 1.6; color: #79687c; margin: 18px 0 9px; }
+.answerForm { display: flex; flex-direction: column; gap: 9px; margin: 14px 0; }
+.answerForm label { font-size: 12px; color: #978797; }
+.answerInputRow { display: flex; gap: 9px; }
+.answerInputRow input { min-width: 0; flex: 1; font-size: 15px; }
+.answerInputRow > button { flex-shrink: 0; font-size: 12px; }
+.answerCorrect, .answerIncorrect { display: flex; align-items: flex-start; gap: 13px; margin: 27px 0; padding: 18px; border-radius: 12px; }
+.answerCorrect { background: #edf3e9; color: #738465; }
+.answerIncorrect { background: #fbefea; color: #b08372; }
+.answerIcon { display: grid; place-items: center; background: #fff9; width: 33px; height: 33px; border-radius: 50%; flex-shrink: 0; }
+.answerCorrect strong, .answerIncorrect strong { font-size: 13px; font-weight: 550; }
+.answerCorrect p, .answerIncorrect p { margin: 10px 0 4px; font-size: 23px; }
+.answerCorrect p > span, .answerIncorrect p > span { font-size: 13px; font-weight: 400; opacity: .8; }
+.answerCorrect small, .answerIncorrect small { font-size: 12px; }
+.answerCorrect .feedbackExample, .answerIncorrect .feedbackExample { font-size: 13px; line-height: 1.6; margin-top: 15px; }
+.ratingSection { border-top: 1px solid #eee7ed; margin-top: 28px; padding-top: 22px; }
+.ratingSection h3 { font-size: 14px; font-weight: 500; margin: 0 0 17px; text-align: center; }
+.ratingGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 9px; }
+.ratingButton { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 13px 5px; border: 1px solid transparent; border-radius: 10px; cursor: pointer; transition: transform .15s, box-shadow .15s; }
+.ratingButton:hover:not(:disabled) { transform: translateY(-2px); }
+.ratingButton:disabled { cursor: default; opacity: .55; }
+.ratingButton > span { font-size: 22px; line-height: 1; margin-bottom: 6px; }
+.ratingButton strong { font-size: 13px; font-weight: 550; }
+.ratingButton small { font-size: 9px; opacity: .8; }
+.forgot { background: #f9ede9; color: #b7867c; }
+.hard { background: #faf3df; color: #b39a62; }
+.good { background: #eef3e8; color: #8a9f78; }
+.easy { background: #f0e9f6; color: #a18ab4; }
+.ratingSelected { border-color: currentColor; box-shadow: 0 0 0 2px #a590a21a; }
+.scheduleNote { font-size: 11px; line-height: 1.7; text-align: center; color: #a295a0; margin: 13px 0; }
+.saveButton { width: 100%; justify-content: center; margin-top: 19px; }
+.textButton { display: inline-flex; justify-content: center; align-items: center; gap: 7px; border: 0; padding: 8px 4px; background: transparent; color: #a08b9a; font-size: 11px; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.hanziExercise { display: flex; flex-direction: column; align-items: center; gap: 15px; }
+.writingModes { display: flex; gap: 7px; justify-content: center; flex-wrap: wrap; margin: 5px 0; }
+.writingModes > button { font-size: 11px; padding: 9px 10px; }
+.writingIntro { display: flex; align-items: center; flex-direction: column; justify-content: center; text-align: center; gap: 13px; width: 100%; padding: 40px 20px; background: #faf7fb; border: 1px dashed #e6dce9; border-radius: 13px; color: #b49bbe; }
+.writingIntro p { font-size: 13px; color: #8e7c95; line-height: 1.8; max-width: 265px; margin: 0; }
+.writingIntro small { font-size: 11px; color: #aa9daf; }
+.glyphProgress { display: flex; gap: 7px; justify-content: center; flex-wrap: wrap; }
+.glyphProgress span { display: grid; place-items: center; width: 25px; height: 25px; border-radius: 50%; background: #f4f0f5; color: #b2a6b9; font-size: 11px; }
+.glyphProgress .activeGlyph { color: #90759e; background: #eae0f0; }
+.writingPrompt { color: #a391a9; font-size: 12px; margin: 0; }
+.writerFrame { position: relative; border: 1px solid #e3d7e7; border-radius: 13px; overflow: hidden; width: 262px; height: 262px; background: linear-gradient(45deg, transparent 49.7%, #eee5f0 49.7%, #eee5f0 50.3%, transparent 50.3%), linear-gradient(-45deg, transparent 49.7%, #eee5f0 49.7%, #eee5f0 50.3%, transparent 50.3%), linear-gradient(0deg, transparent 49.7%, #e5d9ea 49.7%, #e5d9ea 50.3%, transparent 50.3%), linear-gradient(90deg, transparent 49.7%, #e5d9ea 49.7%, #e5d9ea 50.3%, transparent 50.3%), #fffdfd; }
+.writerTarget { width: 260px; height: 260px; touch-action: none; }
+.writerLoading { position: absolute; inset: 0; display: flex; justify-content: center; flex-direction: column; align-items: center; gap: 12px; background: #fff9; font-size: 12px; color: #a88cb2; }
+.writingHint { font-size: 10px; line-height: 1.7; text-align: center; color: #afa3b3; }
+.mistakeNote { font-size: 12px; text-align: center; color: #b08b77; margin: 0; }
+.freeCanvas { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 100%; }
+.writingCanvas { width: min(260px, 100%); height: auto; aspect-ratio: 1; border: 1px solid #e3d7e7; border-radius: 13px; background: linear-gradient(0deg, transparent 49.7%, #e5d9ea 49.7%, #e5d9ea 50.3%, transparent 50.3%), linear-gradient(90deg, transparent 49.7%, #e5d9ea 49.7%, #e5d9ea 50.3%, transparent 50.3%), #fffdfd; touch-action: none; }
+.fallbackNote { font-size: 11px; text-align: center; padding: 10px 13px; line-height: 1.8; background: #faf4e8; color: #af9873; border-radius: 8px; margin: 5px 0; }
+.correctNotice, .incorrectNotice { padding: 10px 13px; border-radius: 8px; font-size: 12px; line-height: 1.7; margin: 10px 0; text-align: center; }
+.correctNotice { color: #839870; background: #f0f5eb; }
+.incorrectNotice { color: #ae807a; background: #faefec; }
+.actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; }
+.actions > button { font-size: 11px; }
+.spin { animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .spin { animation: none; } .ratingButton { transition: none; } }
+@media (max-width: 560px) {
+  .flashcard { min-height: 380px; padding: 35px 20px 29px; }
+  .exercise { padding: 21px 15px; }
+  .exerciseHeading h2 { font-size: 18px; }
+  .exerciseTabs button { font-size: 10px; flex-direction: column; gap: 5px; }
+  .cardFooter { align-items: flex-start; }
+  .cardFooter p { font-size: 11px; max-width: 160px; margin: 0; }
+  .cardFooter > button { font-size: 12px; }
+  .answerInputRow { flex-direction: column; }
+  .ratingGrid { gap: 6px; }
+  .ratingButton small { font-size: 8px; }
+  .writingModes { gap: 5px; }
+  .writingModes > button { font-size: 10px; padding: 9px 7px; }
+  .writingModes > button > svg { display: none; }
+}
