@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { Bell, BookOpen, CalendarDays, ChartNoAxesCombined, ChevronRight, Flame, Heart, House, LogOut, Menu, PenLine, RefreshCw, Settings, Sparkles, X, CheckCircle2, CircleAlert } from 'lucide-react';
+import { Bell, BookOpen, CalendarDays, ChartNoAxesCombined, ChevronRight, Flame, FolderOpen, Heart, House, LogOut, Menu, PenLine, RefreshCw, Settings, Sparkles, X, CheckCircle2, CircleAlert } from 'lucide-react';
 import { mutate, refreshSnapshot, signOut } from '@/lib/actions';
 import type { Language, Snapshot } from '@/lib/types';
 import { LANGUAGES } from '@/lib/types';
@@ -14,17 +14,19 @@ import { SettingsPage } from './settings';
 import { CouplePage, StatsPage, NotificationsPage } from './social-stats';
 import { StudyPage } from './study-page';
 import { OnboardingLanguage } from './onboarding-language';
+import { StudyHistoryPage } from './study-history';
 
 const navigation = [
   { href: '/', key: 'dashboard', label: 'Hôm nay', icon: House },
   { href: '/learn', key: 'learn', label: 'Học từ mới', icon: Sparkles },
   { href: '/review', key: 'review', label: 'Ôn tập', icon: RefreshCw },
   { href: '/practice', key: 'practice', label: 'Luyện viết', icon: PenLine },
+  { href: '/history', key: 'history', label: 'Lịch sử từ đã học', icon: FolderOpen },
   { href: '/decks', key: 'decks', label: 'Bộ từ vựng', icon: BookOpen },
   { href: '/couple', key: 'couple', label: 'Góc của hai đứa', icon: Heart },
   { href: '/stats', key: 'stats', label: 'Hành trình', icon: ChartNoAxesCombined },
 ];
-const titles: Record<string, string> = { dashboard: 'Hôm nay', learn: 'Học từ mới', review: 'Ôn tập', practice: 'Luyện viết', decks: 'Bộ từ vựng', couple: 'Góc của hai đứa', stats: 'Hành trình', settings: 'Cài đặt', notifications: 'Thông báo' };
+const titles: Record<string, string> = { dashboard: 'Hôm nay', learn: 'Học từ mới', review: 'Ôn tập', practice: 'Luyện viết', history: 'Lịch sử từ đã học', decks: 'Bộ từ vựng', couple: 'Góc của hai đứa', stats: 'Hành trình', settings: 'Cài đặt', notifications: 'Thông báo' };
 
 export function Workspace({ initialData, view, deckId, initialLanguage }: { initialData: Snapshot; view: string; deckId?: string; initialLanguage?: Language }) {
   const [data, setData] = useState(initialData);
@@ -94,6 +96,7 @@ export function Workspace({ initialData, view, deckId, initialLanguage }: { init
       <main id="main-content" className={`main-content ${['learn','review','practice'].includes(view) ? 'study-main' : ''}`}>
         {view === 'dashboard' && <Dashboard />}
         {['learn','review','practice'].includes(view) && <StudyPage mode={view as 'learn' | 'review' | 'practice'} />}
+        {view === 'history' && <StudyHistoryPage />}
         {view === 'decks' && <DecksPage deckId={deckId} />}
         {view === 'settings' && <SettingsPage />}
         {view === 'couple' && <CouplePage />}

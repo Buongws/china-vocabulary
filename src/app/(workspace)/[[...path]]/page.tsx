@@ -5,7 +5,7 @@ import { SetupGuide } from '@/components/setup-guide';
 import type { Snapshot } from '@/lib/types';
 
 export const dynamic = 'force-dynamic';
-const views = ['', 'learn', 'review', 'practice', 'decks', 'couple', 'stats', 'settings', 'notifications'];
+const views = ['', 'learn', 'review', 'practice', 'history', 'decks', 'couple', 'stats', 'settings', 'notifications'];
 
 export default async function WorkspacePage({ params, searchParams }: { params: Promise<{ path?: string[] }>; searchParams: Promise<{ language?: string }> }) {
   const { path = [] } = await params;
